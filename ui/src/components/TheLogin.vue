@@ -43,7 +43,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, reactive } from "vue";
-import Emo from "emosd";
+import { Emo } from "emosd";
 import SwInput from "@snowind/input";
 import { user } from "@/state";
 import { adminLogin } from "@/api";

@@ -1,6 +1,6 @@
 import path from 'path'
 import { defineConfig } from 'vite'
-import typescript2 from "rollup-plugin-typescript2"
+import typescript from '@rollup/plugin-typescript';
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import Icons from 'unplugin-icons/vite'
@@ -25,11 +25,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    typescript2({
-      check: false,
-      tsconfig: path.resolve(__dirname, 'tsconfig.json'),
-      clean: true
-    }),
+    typescript(),
     vue(),
     Components({
       resolvers: [
