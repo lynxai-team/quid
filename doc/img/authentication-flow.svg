@@ -1,10 +1,10 @@
-<svg version="1.1" viewBox="0 0 183 194" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 183 194" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <marker id="a" overflow="visible" orient="auto">
-<path transform="matrix(-.2 0 0 -.2 -1.2 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+<path transform="matrix(-.2 0 0 -.2 -1.2 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="context-stroke" stroke="context-stroke" stroke-width="1pt"/>
 </marker>
 <marker id="b" overflow="visible" orient="auto">
-<path transform="matrix(-.2 0 0 -.2 -1.2 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+<path transform="matrix(-.2 0 0 -.2 -1.2 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="context-stroke" stroke="context-stroke" stroke-width="1pt"/>
 </marker>
 </defs>
 <g transform="translate(-8.04 -6.08)">
@@ -20,7 +20,7 @@
 <g transform="matrix(.731 1.03 -1.03 .731 80.9 -33.7)">
 <g transform="translate(-.0543 -.0417)">
 <g transform="rotate(-45.3 62.3 -38.1)">
-<path transform="matrix(.207 -.0336 .0336 .207 -61.4 -15.1)" d="m383 19.6a5.77 5.63 9.7 00-5.6 4.67l11.4 1.94a5.77 5.63 9.7 00-4.75-6.52 5.77 5.63 9.7 00-1.04-.082zm5.79 6.6-11.6-1.88-5.83 32.8 33.9 6.79.0332-.162 2.3-11.5-15.4-3.09c3.4-1.17 7.67-3.64 12.5-7.81l-.0957-.137-6.8-9.55c-5.12 2.91-8.72 5.84-11 8.47l2.11-13.9zm15.9 15a5.77 5.63 55 001.3-7.96 5.77 5.63 55 00-7.93-1.5zm.656 22.5a5.63 5.77 11.8 006.69-4.5 5.63 5.77 11.8 00-4.34-6.8z" fill="#06b5d2" fill-opacity=".996" fill-rule="evenodd" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
+<path transform="matrix(.207 -.0336 .0336 .207 -61.4 -15.1)" d="m383 19.6a5.77 5.63 9.7 00-5.6 4.67l11.4 1.94a5.77 5.63 9.7 00-4.75-6.52 5.77 5.63 9.7 00-1.04-.082zm5.79 6.6-11.6-1.88-5.83 32.8 33.9 6.79.0332-.162 2.3-11.5-15.4-3.09c3.4-1.17 7.67-3.64 12.5-7.81l-.0957-.137-6.8-9.55c-5.12 2.91-8.72 5.84-11 8.47l2.11-13.9zm15.9 15a5.77 5.63 55 001.3-7.96 5.77 5.63 55 00-7.93-1.5zm.656 22.5a5.63 5.77 11.8 006.69-4.5 5.63 5.77 11.8 00-4.34-6.8z" fill="#06b5d2" fill-opacity=".996" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
 </g>
 </g>
 <g transform="translate(-.0543 -.0417)">
@@ -29,7 +29,7 @@
 <g transform="rotate(180 46.7 17.5)">
 <g transform="translate(-.0543 -.0417)">
 <g transform="rotate(-45.3 62.3 -38.1)">
-<path transform="matrix(-.207 .0336 -.0336 -.207 85 -5.06)" d="m276 95.1-2.34 11.7 15.4 3.09c-3.4 1.17-7.67 3.64-12.5 7.81l.0957.137 6.8 9.55c5.13-2.91 8.72-5.84 11-8.47l-2.11 13.9 11.7 1.9 5.83-32.8-12.1-2.43zm16.5 37.7a5.77 5.63 9.7 004.75 6.52 5.77 5.63 9.7 006.64-4.58zm-15.9-15a5.77 5.63 55 00-1.3 7.96 5.77 5.63 55 007.93 1.5zm-1.67-22.7a5.63 5.77 11.8 00-5.68 4.62 5.63 5.77 11.8 004.34 6.8l2.35-11.3a5.63 5.77 11.8 00-1.01-.113z" fill="#06b5d2" fill-opacity=".996" fill-rule="evenodd" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
+<path transform="matrix(-.207 .0336 -.0336 -.207 85 -5.06)" d="m276 95.1-2.34 11.7 15.4 3.09c-3.4 1.17-7.67 3.64-12.5 7.81l.0957.137 6.8 9.55c5.13-2.91 8.72-5.84 11-8.47l-2.11 13.9 11.7 1.9 5.83-32.8-12.1-2.43zm16.5 37.7a5.77 5.63 9.7 004.75 6.52 5.77 5.63 9.7 006.64-4.58zm-15.9-15a5.77 5.63 55 00-1.3 7.96 5.77 5.63 55 007.93 1.5zm-1.67-22.7a5.63 5.77 11.8 00-5.68 4.62 5.63 5.77 11.8 004.34 6.8l2.35-11.3a5.63 5.77 11.8 00-1.01-.113z" fill="#06b5d2" fill-opacity=".996" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
 </g>
 </g>
 <g transform="translate(-.0543 -.0417)">
@@ -40,7 +40,7 @@
 <g transform="matrix(1.26 0 0 1.26 38.1 5.2)">
 <g transform="translate(-.0543 -.0417)">
 <g transform="rotate(-45.3 62.3 -38.1)">
-<path transform="matrix(.148 .149 -.149 .148 -26.4 -72.6)" d="m340 .279a5.77 5.63.483 00-5.82 5.59l11.5.0879a5.77 5.63.483 00-5.73-5.68zm5.73 5.68h-11.7c-.6 5.86-.303 10.5.516 13.9l-10.1-9.79-8.36 8.46 23.3 23.8 25.2-23.7-8.14-8.67-11.5 10.8c1.02-3.45 1.48-8.37.908-14.7zm-25.5 2.59a5.63 5.77 45.2 00-4.05 1.71 5.63 5.77 45.2 00-.115 8.07l8.18-8.15a5.63 5.77 45.2 00-4.01-1.63zm40.1 0a5.77 5.63 47.3 00-3.73 1.47l7.84 8.47a5.77 5.63 47.3 00.211-8.06 5.77 5.63 47.3 00-4.33-1.88z" fill="#06b5d2" fill-opacity=".996" fill-rule="evenodd" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
+<path transform="matrix(.148 .149 -.149 .148 -26.4 -72.6)" d="m340 .279a5.77 5.63.483 00-5.82 5.59l11.5.0879a5.77 5.63.483 00-5.73-5.68zm5.73 5.68h-11.7c-.6 5.86-.303 10.5.516 13.9l-10.1-9.79-8.36 8.46 23.3 23.8 25.2-23.7-8.14-8.67-11.5 10.8c1.02-3.45 1.48-8.37.908-14.7zm-25.5 2.59a5.63 5.77 45.2 00-4.05 1.71 5.63 5.77 45.2 00-.115 8.07l8.18-8.15a5.63 5.77 45.2 00-4.01-1.63zm40.1 0a5.77 5.63 47.3 00-3.73 1.47l7.84 8.47a5.77 5.63 47.3 00.211-8.06 5.77 5.63 47.3 00-4.33-1.88z" fill="#06b5d2" fill-opacity=".996" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
 </g>
 </g>
 <g transform="translate(-.0543 -.0417)">
@@ -49,7 +49,7 @@
 <g transform="rotate(180 46.7 17.5)">
 <g transform="translate(-.0543 -.0417)">
 <g transform="rotate(-45.3 62.3 -38.1)">
-<path transform="matrix(-.148 -.149 .149 -.148 50 52.5)" d="m341 118-25.2 23.7 8.15 8.67 11.5-10.8c-1.02 3.45-1.48 8.36-.91 14.7h11.9c.6-5.87.303-10.5-.516-13.9l10.1 9.79.117-.117 8.25-8.34zm15.1 32.1a5.63 5.77 45.2 008.07-.0859 5.63 5.77 45.2 00.115-8.06zm-40.2-8.32a5.77 5.63 47.3 00-.211 8.06 5.77 5.63 47.3 008.05.412zm18.7 12.5a5.77 5.63.483 005.73 5.68 5.77 5.63.483 005.82-5.59z" fill="#06b5d2" fill-opacity=".996" fill-rule="evenodd" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
+<path transform="matrix(-.148 -.149 .149 -.148 50 52.5)" d="m341 118-25.2 23.7 8.15 8.67 11.5-10.8c-1.02 3.45-1.48 8.36-.91 14.7h11.9c.6-5.87.303-10.5-.516-13.9l10.1 9.79.117-.117 8.25-8.34zm15.1 32.1a5.63 5.77 45.2 008.07-.0859 5.63 5.77 45.2 00.115-8.06zm-40.2-8.32a5.77 5.63 47.3 00-.211 8.06 5.77 5.63 47.3 008.05.412zm18.7 12.5a5.77 5.63.483 005.73 5.68 5.77 5.63.483 005.82-5.59z" fill="#06b5d2" fill-opacity=".996" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
 </g>
 </g>
 <g transform="translate(-.0543 -.0417)">
@@ -57,12 +57,12 @@
 </g>
 </g>
 </g>
-<path transform="matrix(.265 0 0 .265 7.03 6.03)" d="m297 20.6a5.63 5.77 80.8 00-1.04.0762 5.63 5.77 80.8 00-4.79 6.49l11.4-1.86a5.63 5.77 80.8 00-5.56-4.71zm5.56 4.71-11.6 1.97 2.64 15.5c-2.31-2.76-6.15-5.86-11.8-8.91l-.0918.137-6.48 9.78c4.56 3.74 8.58 6.05 11.9 7.24l-13.7 3.03.0332.162 2.4 11.5 32.7-6.33-2.08-12.2-3.74-21.9zm-29.1 28.9a5.77 5.63 78.7 00-4.38 6.77 5.77 5.63 78.7 006.66 4.55zm8.33-20.2a5.63 5.77 34 00-7.9 1.64 5.63 5.77 34 001.45 7.94z" fill="#06b5d2" fill-opacity=".996" fill-rule="evenodd" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
+<path transform="matrix(.265 0 0 .265 7.03 6.03)" d="m297 20.6a5.63 5.77 80.8 00-1.04.0762 5.63 5.77 80.8 00-4.79 6.49l11.4-1.86a5.63 5.77 80.8 00-5.56-4.71zm5.56 4.71-11.6 1.97 2.64 15.5c-2.31-2.76-6.15-5.86-11.8-8.91l-.0918.137-6.48 9.78c4.56 3.74 8.58 6.05 11.9 7.24l-13.7 3.03.0332.162 2.4 11.5 32.7-6.33-2.08-12.2-3.74-21.9zm-29.1 28.9a5.77 5.63 78.7 00-4.38 6.77 5.77 5.63 78.7 006.66 4.55zm8.33-20.2a5.63 5.77 34 00-7.9 1.64 5.63 5.77 34 001.45 7.94z" fill="#06b5d2" fill-opacity=".996" stroke="#06b5d2" stroke-linecap="square" stroke-width=".215" style="paint-order:stroke fill markers"/>
 <g transform="matrix(1.24 -.212 .212 1.24 38.4 23.3)"></g>
 <g transform="matrix(-.697 1.05 -1.05 -.697 148 -9.8)" fill="#48feff" fill-opacity=".996">
 <g transform="translate(-.0543 -.0417)">
 <g transform="rotate(-45.3 62.3 -38.1)" fill="#48feff" fill-opacity=".996">
-<path transform="matrix(.0429 -.205 .205 .0429 -19.2 56.5)" d="m356 83.5-5.83 9.55 23.7 15.8.604 3.53 3.74 21.9 11.7-2-2.45-14.3 11.6 7.74 6.57-9.92-11.3-7.36 13.2-2.91-.0332-.164-2.4-11.5-25.5 4.94zm51.5 21.9a5.77 5.63 78.7 004.38-6.77 5.77 5.63 78.7 00-6.66-4.55zm-1.88 10.6-6.45 9.58a5.63 5.77 34 007.9-1.64 5.63 5.77 34 00-1.45-7.93zm-15.9 16.4-11.4 1.86a5.63 5.77 80.8 006.6 4.63 5.63 5.77 80.8 004.79-6.49z" fill="#48feff" fill-opacity=".996" fill-rule="evenodd" stroke="#83eafb" stroke-linecap="square" stroke-opacity=".996" stroke-width=".215" style="paint-order:stroke fill markers"/>
+<path transform="matrix(.0429 -.205 .205 .0429 -19.2 56.5)" d="m356 83.5-5.83 9.55 23.7 15.8.604 3.53 3.74 21.9 11.7-2-2.45-14.3 11.6 7.74 6.57-9.92-11.3-7.36 13.2-2.91-.0332-.164-2.4-11.5-25.5 4.94zm51.5 21.9a5.77 5.63 78.7 004.38-6.77 5.77 5.63 78.7 00-6.66-4.55zm-1.88 10.6-6.45 9.58a5.63 5.77 34 007.9-1.64 5.63 5.77 34 00-1.45-7.93zm-15.9 16.4-11.4 1.86a5.63 5.77 80.8 006.6 4.63 5.63 5.77 80.8 004.79-6.49z" fill="#48feff" fill-opacity=".996" stroke="#83eafb" stroke-linecap="square" stroke-opacity=".996" stroke-width=".215" style="paint-order:stroke fill markers"/>
 </g>
 </g>
 <g transform="translate(-.0543 -.0417)">
