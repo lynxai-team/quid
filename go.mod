@@ -1,6 +1,6 @@
 module github.com/teal-finance/quid
 
-go 1.22
+go 1.24.0
 
 require (
 	github.com/acmacalister/skittles v0.0.0-20160609003031-7423546701e1
@@ -14,7 +14,7 @@ require (
 	github.com/teal-finance/emo v0.0.0-20240610104517-58d37361ce25
 	github.com/teal-finance/garcon v0.35.1
 	github.com/teal-finance/incorruptible v0.0.0-20240610111019-e80aff374f9b
-	golang.org/x/crypto v0.24.0
+	golang.org/x/crypto v0.45.0
 )
 
 require (
@@ -54,9 +54,9 @@ require (
 	github.com/subosito/gotenv v1.6.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/exp v0.0.0-20240604190554-fc45aab8b7f8 // indirect
-	golang.org/x/net v0.26.0 // indirect
-	golang.org/x/sys v0.21.0 // indirect
-	golang.org/x/text v0.16.0 // indirect
+	golang.org/x/net v0.47.0 // indirect
+	golang.org/x/sys v0.38.0 // indirect
+	golang.org/x/text v0.31.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
 	google.golang.org/protobuf v1.34.1 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
