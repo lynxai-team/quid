@@ -4,7 +4,7 @@ go 1.25.5
 
 require (
 	github.com/LynxAIeu/emo v0.0.0-20260102000151-bd606f39cc08
-	github.com/LynxAIeu/garcon v0.50.0
+	github.com/LynxAIeu/garcon v0.60.0
 	github.com/LynxAIeu/incorruptible v0.0.0-20260102113753-6906f8c34a1e
 	github.com/acmacalister/skittles v0.0.0-20160609003031-7423546701e1
 	github.com/cristalhq/base64 v0.1.2
