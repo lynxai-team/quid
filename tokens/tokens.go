@@ -16,12 +16,13 @@ import (
 	"hash"
 	"time"
 
-	"github.com/golang-jwt/jwt/v4"
+	"github.com/LynxAIeu/quid/crypt"
 
 	"github.com/LynxAIeu/emo"
 	"github.com/LynxAIeu/garcon/gg"
 	"github.com/LynxAIeu/garcon/timex"
-	"github.com/LynxAIeu/quid/crypt"
+
+	"github.com/golang-jwt/jwt/v5"
 )
 
 var log = emo.NewZone("tokens")
@@ -372,14 +373,6 @@ func ValidAccessToken(accessToken, algo string, verificationKeyDER []byte) error
 	var claims AccessClaims
 	f := func(*jwt.Token) (any, error) { return verificationKey, nil }
 	validator := jwt.NewParser(jwt.WithValidMethods([]string{algo}))
-	token, err := validator.ParseWithClaims(accessToken, &claims, f)
-	if err != nil {
-		return err
-	}
-
-	if err := token.Claims.Valid(); err != nil {
-		return err
-	}
-
-	return nil
+	_, err = validator.ParseWithClaims(accessToken, &claims, f)
+	return err
 }

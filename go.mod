@@ -4,12 +4,12 @@ go 1.25.5
 
 require (
 	github.com/LynxAIeu/emo v0.0.0-20260102000151-bd606f39cc08
-	github.com/LynxAIeu/garcon v0.40.1-0.20260102004849-c4f3ce74e663
-	github.com/LynxAIeu/incorruptible v0.0.0-20260102003103-3601ddc9fc62
+	github.com/LynxAIeu/garcon v0.50.0
+	github.com/LynxAIeu/incorruptible v0.0.0-20260102113753-6906f8c34a1e
 	github.com/acmacalister/skittles v0.0.0-20160609003031-7423546701e1
 	github.com/cristalhq/base64 v0.1.2
 	github.com/go-chi/chi/v5 v5.2.3
-	github.com/golang-jwt/jwt/v4 v4.5.2
+	github.com/golang-jwt/jwt/v5 v5.3.0
 	github.com/jmoiron/sqlx v1.4.0
 	github.com/lib/pq v1.10.9
 	github.com/manifoldco/promptui v0.9.0
@@ -44,8 +44,7 @@ require (
 	github.com/prometheus/common v0.67.4 // indirect
 	github.com/prometheus/procfs v0.19.2 // indirect
 	github.com/rs/cors v1.11.1 // indirect
-	github.com/sagikazarmark/locafero v0.11.0 // indirect
-	github.com/sourcegraph/conc v0.3.1-0.20240121214520-5f936abd7ae8 // indirect
+	github.com/sagikazarmark/locafero v0.12.0 // indirect
 	github.com/spf13/afero v1.15.0 // indirect
 	github.com/spf13/cast v1.10.0 // indirect
 	github.com/spf13/pflag v1.0.10 // indirect

@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/golang-jwt/jwt/v4"
+	"github.com/golang-jwt/jwt/v5"
 
 	"github.com/LynxAIeu/garcon/gg"
 	"github.com/LynxAIeu/quid/server"

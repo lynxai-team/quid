@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	turbo64 "github.com/cristalhq/base64"
-	"github.com/golang-jwt/jwt/v4"
+	"github.com/golang-jwt/jwt/v5"
 
 	"github.com/LynxAIeu/emo"
 	"github.com/LynxAIeu/quid/tokens"
@@ -183,18 +183,9 @@ func TestNewAccessToken(t *testing.T) {
 
 			var claims tokens.AccessClaims
 			f := func(*jwt.Token) (any, error) { return publicKey, nil }
-			token, err := validator.ParseWithClaims(tokenStr, &claims, f)
+			_, err = validator.ParseWithClaims(tokenStr, &claims, f)
 			if err != nil {
 				t.Error("ParseWithClaims error:", err)
-				return
-			}
-
-			if err := token.Claims.Valid(); err != nil {
-				t.Error("token.Claims.Valid:", err)
-				return
-			}
-			if err := claims.Valid(); err != nil {
-				t.Error("claims.Valid:", err)
 				return
 			}
 

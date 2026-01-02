@@ -18,10 +18,11 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/cristalhq/base64"
-
 	"github.com/LynxAIeu/garcon/gg"
 	"github.com/LynxAIeu/quid/server"
+
+	"github.com/cristalhq/base64"
+	"github.com/golang-jwt/jwt/v5"
 )
 
 type Tokenizer interface {
@@ -436,8 +437,8 @@ func AccessClaimsFromBase64(payload []byte, reuse bool) (*AccessClaims, error) {
 		return nil, &claimError{err, payload}
 	}
 
-	err = claims.Valid() // error can be: expired or invalid access token
-	return &claims, err
+	err = jwt.NewValidator().Validate(claims)
+	return &claims, err // error can be: expired or invalid access token
 }
 
 type claimError struct {

@@ -7,7 +7,7 @@ import (
 	"github.com/go-chi/chi/v5"
 
 	"github.com/LynxAIeu/emo"
-	"github.com/LynxAIeu/garcon"
+	"github.com/LynxAIeu/garcon/gc"
 	"github.com/LynxAIeu/garcon/gg"
 	"github.com/LynxAIeu/garcon/vv"
 	"github.com/LynxAIeu/incorruptible"
@@ -29,14 +29,14 @@ func RunServer(port int, devMode bool, allowedOrigins, wwwDir string) {
 	}
 
 	log.Print("Server listening on " + color.UnderlineBlue("http://localhost"+server.Addr))
-	log.Fatal(garcon.ListenAndServe(&server))
+	log.Fatal(gc.ListenAndServe(&server))
 }
 
 func newServer(port int, devMode bool, allowedOrigins, wwwDir string) http.Server {
-	g := garcon.New(
-		garcon.WithURLs(gg.SplitClean(allowedOrigins)...),
-		garcon.WithServerName("Quid"),
-		garcon.WithDev(devMode))
+	g := gc.New(
+		gc.WithURLs(gg.SplitClean(allowedOrigins)...),
+		gc.WithServerName("Quid"),
+		gc.WithDev(devMode))
 
 	gw = g.Writer
 
@@ -59,10 +59,10 @@ func newServer(port int, devMode bool, allowedOrigins, wwwDir string) http.Serve
 	router := newRouter(g, wwwDir)
 	handler := middleware.Then(router)
 
-	return garcon.Server(handler, port, nil)
+	return gc.Server(handler, port, nil)
 }
 
-func newRouter(g *garcon.Garcon, wwwDir string) http.Handler {
+func newRouter(g *gc.Garcon, wwwDir string) http.Handler {
 	r := chi.NewRouter()
 
 	// Static website: set the Incorruptible cookie only when visiting index.html
