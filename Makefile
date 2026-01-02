@@ -32,37 +32,27 @@ all: build quid doc
 build: ui/dist
 
 
-ui/dist: ui/node_modules ui/yarn.lock $(shell find ui/src -type f) $(shell test ! -d ui/node_modules || find ui/node_modules -iname '*test*' -prune -o -name *.[jt]s -type f -print)
-	cd ui && { yarn build || yarnpkg build ; }
+ui/dist: ui/node_modules ui/package-lock.json $(shell find ui/src -type f) $(shell test ! -d ui/node_modules || find ui/node_modules -iname '*test*' -prune -o -name *.[jt]s -type f -print)
+	cd ui && npm run build
 
-ui/node_modules/*/*: ui/yarn.lock
-ui/node_modules/*:   ui/yarn.lock
-ui/node_modules:     ui/yarn.lock
-ui/yarn.lock:        ui/package.json
-ui/node_modules ui/yarn.lock:
-	cd ui && { yarn install || yarnpkg install ; }
-
+ui/node_modules/*/*:  ui/package-lock.json
+ui/node_modules/*:    ui/package-lock.json
+ui/node_modules:      ui/package-lock.json
+ui/package-lock.json: ui/package.json
+ui/node_modules       ui/package-lock.json:
+	cd ui && npm run build
 
 .PHONY: front
 front:
-	cd ui && \
-	{ yarn    && yarn    dev; } || \
-	{ yarnpkg && yarnpkg dev; }
-
+	cd ui && npm i --prefer-offline --no-audit --no-fund && npm run dev
 
 .PHONY: run-doc
 run-doc:
-	cd docsite && \
-	{ yarn    && yarn    dev; } || \
-	{ yarnpkg && yarnpkg dev; }
-
+	cd docsite && npm i --prefer-offline --no-audit --no-fund && npm run dev
 
 .PHONY: doc
 doc:
-	cd docsite && \
-	{ yarn    && yarn    build_to_gh; } || \
-	{ yarnpkg && yarnpkg build_to_gh; }
-
+	cd docsite && npm i --prefer-offline --no-audit --no-fund && npm run build_to_gh
 
 .PHONY: run
 run: go.sum $(shell find -name *.go)
@@ -199,13 +189,11 @@ vet: vet-ui vet-go
 
 .PHONY: vet-ui
 vet-ui:
-	cd ui && \
-	{ yarn    && yarn    npm audit --all --recursive; } || \
-	{ yarnpkg && yarnpkg npm audit --all --recursive; }
+	cd ui && npm i --prefer-offline --no-audit --no-fund && npm audit --all --recursive
 
 .PHONY: vet-go
 vet-go:
-	go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest run --fix || true
+	go run github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest run --fix || true
 	$(MAKE) run
 
 
@@ -215,17 +203,19 @@ up+: up+ui up+go
 
 .PHONY: up-ui
 up-ui:
-	cd ui && \
-	{ yarn    && yarn    up --interactive --caret; } || \
-	{ yarnpkg && yarnpkg up --interactive --caret; }
-    # flag --caret prepends the new version with "^" allowing upgrading the minor number
+	@echo TODO
+	# cd ui && npm i --prefer-offline --no-audit --no-fund && npm ??????
+	# { yarn    && yarn    up --interactive --caret; } || \
+	# { yarnpkg && yarnpkg up --interactive --caret; }
+	# flag --caret prepends the new version with "^" allowing upgrading the minor number
 
 .PHONY: up+ui
 up+ui:
-	cd ui && \
-	{ yarn    && yarn    up --interactive --tilde; } || \
-	{ yarnpkg && yarnpkg up --interactive --tilde; }
-    # flag --tilde prepends the new version with "~" that limits vanilla upgrade to patch only
+	@echo TODO
+	# cd ui && \
+	# { yarn    && yarn    up --interactive --tilde; } || \
+	# { yarnpkg && yarnpkg up --interactive --tilde; }
+	# flag --tilde prepends the new version with "~" that limits vanilla upgrade to patch only
 
 .PHONY: up-go
 up-go: go.sum
