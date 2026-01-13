@@ -4,11 +4,11 @@ import (
 	"flag"
 	"net/url"
 
-	"github.com/LynxAIeu/emo"
-	"github.com/LynxAIeu/garcon/gg"
-	"github.com/LynxAIeu/quid/crypt"
-	"github.com/LynxAIeu/quid/server/api"
-	"github.com/LynxAIeu/quid/server/db"
+	"github.com/lynxai-team/emo"
+	"github.com/lynxai-team/garcon/gg"
+	"github.com/lynxai-team/quid/crypt"
+	"github.com/lynxai-team/quid/server/api"
+	"github.com/lynxai-team/quid/server/db"
 )
 
 var log = emo.NewZone("quid")

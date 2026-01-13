@@ -16,11 +16,11 @@ import (
 	"hash"
 	"time"
 
-	"github.com/LynxAIeu/quid/crypt"
+	"github.com/lynxai-team/quid/crypt"
 
-	"github.com/LynxAIeu/emo"
-	"github.com/LynxAIeu/garcon/gg"
-	"github.com/LynxAIeu/garcon/timex"
+	"github.com/lynxai-team/emo"
+	"github.com/lynxai-team/garcon/gg"
+	"github.com/lynxai-team/garcon/timex"
 
 	"github.com/golang-jwt/jwt/v5"
 )
@@ -28,8 +28,8 @@ import (
 var log = emo.NewZone("tokens")
 
 const notSupportedNotice = " not yet supported. " +
-	"Please contact hello@lynxai.eu or " +
-	"open an issue at https://github.com/LynxAIeu/quid"
+	"Please contact hello@lynxai.team or " +
+	"open an issue at https://github.com/lynxai-team/quid"
 
 // GenRefreshToken generates a refresh token for a user in a namespace.
 func GenRefreshToken(timeout, maxTTL, namespace, user string, secretKey []byte) (string, error) {

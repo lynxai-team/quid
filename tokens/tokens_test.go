@@ -12,8 +12,8 @@ import (
 	turbo64 "github.com/cristalhq/base64"
 	"github.com/golang-jwt/jwt/v5"
 
-	"github.com/LynxAIeu/emo"
-	"github.com/LynxAIeu/quid/tokens"
+	"github.com/lynxai-team/emo"
+	"github.com/lynxai-team/quid/tokens"
 )
 
 var cases = []struct {
@@ -242,7 +242,7 @@ func TestNewAccessToken(t *testing.T) {
 go test -bench=. -benchmem ./...
 goos: linux
 goarch: amd64
-pkg: github.com/LynxAIeu/quid/tokens
+pkg: github.com/lynxai-team/quid/tokens
 cpu: AMD Ryzen 9 3900X 12-Core Processor
 BenchmarkBase64Encode-24         5913382   209.2 ns/op   144 B/op   1 allocs/op
 BenchmarkBase64EncodeTurbo-24    8053846   144.6 ns/op   144 B/op   1 allocs/op
@@ -251,7 +251,7 @@ BenchmarkBase64Decode-24         4375579   277.0 ns/op   112 B/op   1 allocs/op
 BenchmarkBase64DecodeTurbo-24    5554828   206.1 ns/op   112 B/op   1 allocs/op
 BenchmarkBase64DecodeString-24   3331362   376.8 ns/op   256 B/op   2 allocs/op
 PASS
-ok      github.com/LynxAIeu/quid/tokens     6.254s
+ok      github.com/lynxai-team/quid/tokens     6.254s
 */
 
 const jwtSample = `{"usr":"jane","grp":["group1","group2"],"org":["organization1","organization2"],"exp":1595950745}`

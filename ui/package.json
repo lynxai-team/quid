@@ -57,17 +57,17 @@
   },
   "packageManager": "yarn@4.1.1+sha256.f3cc0eda8e5560e529c7147565b30faa43b4e472d90e8634d7134a37c7f59781",
   "license": "AGPL-3.0-or-later",
-  "homepage": "https://LynxAI.eu",
+  "homepage": "https://lynxai.team",
   "author": {
     "name": "The Quid contributors",
-    "email": "hello@lynxai.eu",
-    "url": "https://github.com/LynxAIeu/quid/graphs/contributors"
+    "email": "quid@lynxai.team",
+    "url": "https://github.com/lynxai-team/quid/graphs/contributors"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LynxAIeu/quid.git"
+    "url": "https://github.com/lynxai-team/quid.git"
   },
   "bugs": {
-    "url": "https://github.com/LynxAIeu/quid/issues"
+    "url": "https://github.com/lynxai-team/quid/issues"
   }
 }

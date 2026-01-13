@@ -1,4 +1,4 @@
-# ![❄](ui/public/img/logo-2em.svg) Quid &emsp; &emsp; &emsp; [![Go Reference](https://pkg.go.dev/badge/github.com/LynxAIeu/quid.svg "Go documentation for Quid")](https://pkg.go.dev/github.com/LynxAIeu/quid) [![Go Report Card](https://goreportcard.com/badge/github.com/LynxAIeu/quid "Go Report Card for Quid")](https://goreportcard.com/report/github.com/LynxAIeu/quid)
+# ![❄](ui/public/img/logo-2em.svg) Quid &emsp; &emsp; &emsp; [![Go Reference](https://pkg.go.dev/badge/github.com/lynxai-team/quid.svg "Go documentation for Quid")](https://pkg.go.dev/github.com/lynxai-team/quid) [![Go Report Card](https://goreportcard.com/badge/github.com/lynxai-team/quid "Go Report Card for Quid")](https://goreportcard.com/report/github.com/lynxai-team/quid)
 
 ![Quid preview](ui/public/img/quid-preview.jpg)
 
@@ -46,7 +46,7 @@ in independent **Namespaces** providing signature verification for the following
 
 ## Install
 
-Download the latest [release](https://github.com/LynxAIeu/quid/releases) to run a binary or clone the repository to compile from source. See also the [Dockerfile](Dockerfile) to run **Quid** within a light container (less than 20 MB).
+Download the latest [release](https://github.com/lynxai-team/quid/releases) to run a binary or clone the repository to compile from source. See also the [Containerfile](Containerfile) to run **Quid** within a light container (less than 20 MB).
 
 ## Build from source
 
@@ -85,10 +85,6 @@ Quid serves the static web site. Open <http://localhost:8090> to login into the 
     xdg-open http://localhost:8090
 
 ![Screenshot](doc/img/screenshot.png)
-
-## Deploy on Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LynxAIeu/quid)
 
 ## Request tokens
 
@@ -162,7 +158,7 @@ Note: `"exp"` is the expiration timestamp in [Unix time](https://en.wikipedia.or
 
 ### Examples
 
-See the [examples](https://github.com/LynxAIeu/quid_examples) for various backends.
+See the [examples](https://github.com/lynxai-team/quid_examples) for various backends.
 
 ## Client libraries
 
@@ -173,7 +169,7 @@ using a refresh token, and will retry the request with the new access token.
 
 ### Javascript
 
-[QuidJS](https://github.com/LynxAIeu/quidjs) : the javascript requests library.
+[QuidJS](https://github.com/lynxai-team/quidjs) : the javascript requests library.
 
 ## WebAuthn and FIDO2 features
 

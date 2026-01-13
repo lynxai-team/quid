@@ -2,9 +2,9 @@
 
 [![pub package](https://img.shields.io/npm/v/quidjs)](https://www.npmjs.com/package/quidjs)
 
-Install the [Quidjs library](https://github.com/LynxAIeu/quidjs). It transparently manage the requests to api 
-servers. If a server returns a 401 Unauthorized response when an access token is expired the client library will 
-request a new access token from a Quid server, using a refresh token, and will retry the request with the new 
+Install the [Quidjs library](https://github.com/lynxai-team/quidjs). It transparently manage the requests to api
+servers. If a server returns a 401 Unauthorized response when an access token is expired the client library will
+request a new access token from a Quid server, using a refresh token, and will retry the request with the new
 access token
 
 ```bash
@@ -44,5 +44,5 @@ console.log("Backend POST response:", response2)
 
 ## Examples
 
-- [Script src](https://github.com/LynxAIeu/quidjs/tree/master/examples/umd)
-- [Script module](https://github.com/LynxAIeu/quidjs/tree/master/examples/esm)
+- [Script src](https://github.com/teal-finance/quidjs/tree/master/examples/umd)
+- [Script module](https://github.com/teal-finance/quidjs/tree/master/examples/esm)

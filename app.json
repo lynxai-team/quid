@@ -1,8 +1,8 @@
 {
   "name": "Quid",
   "description": "JWT server providing Refresh/Access tokens supporting HMAC, RSA, ECDSA and EdDSA",
-  "repository": "https://github.com/LynxAIeu/quid",
-  "logo": "https://raw.githubusercontent.com/LynxAIeu/quid/main/ui/public/img/logo.svg",
+  "repository": "https://github.com/lynxai-team/quid",
+  "logo": "https://raw.githubusercontent.com/lynxai-team/quid/main/ui/public/img/logo.svg",
   "keywords": [
     "JWT",
     "JSON Web Token",

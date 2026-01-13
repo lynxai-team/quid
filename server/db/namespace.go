@@ -7,9 +7,9 @@ import (
 	// pg import.
 	_ "github.com/lib/pq"
 
-	"github.com/LynxAIeu/quid/crypt"
-	"github.com/LynxAIeu/quid/server"
-	"github.com/LynxAIeu/quid/tokens"
+	"github.com/lynxai-team/quid/crypt"
+	"github.com/lynxai-team/quid/server"
+	"github.com/lynxai-team/quid/tokens"
 )
 
 // SelectAllNamespaces : get the namespaces.

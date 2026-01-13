@@ -3,9 +3,9 @@ package api
 import (
 	"net/http"
 
-	"github.com/LynxAIeu/incorruptible"
-	"github.com/LynxAIeu/quid/server"
-	"github.com/LynxAIeu/quid/server/db"
+	"github.com/lynxai-team/incorruptible"
+	"github.com/lynxai-team/quid/server"
+	"github.com/lynxai-team/quid/server/db"
 )
 
 // isNsAdmin checks that the requested namespace operation

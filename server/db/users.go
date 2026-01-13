@@ -8,7 +8,7 @@ import (
 	_ "github.com/lib/pq"
 	"golang.org/x/crypto/bcrypt"
 
-	"github.com/LynxAIeu/quid/server"
+	"github.com/lynxai-team/quid/server"
 )
 
 // selectEnabledUsrID : get a user id from it's name.

@@ -5,7 +5,7 @@ import (
 
 	_ "github.com/lib/pq"
 
-	"github.com/LynxAIeu/quid/server"
+	"github.com/lynxai-team/quid/server"
 )
 
 // SelectAllGroups : get all the groups.

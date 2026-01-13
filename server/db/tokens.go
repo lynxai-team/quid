@@ -1,7 +1,7 @@
 package db
 
 import (
-	"github.com/LynxAIeu/quid/tokens"
+	"github.com/lynxai-team/quid/tokens"
 )
 
 // genNsAdminToken : generate a refresh token for an admin user and namespace
