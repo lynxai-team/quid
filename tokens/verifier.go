@@ -18,8 +18,9 @@ import (
 	"net/url"
 	"strings"
 
+	"github.com/TealsFi/quid/server"
+
 	"github.com/lynxai-team/garcon/gg"
-	"github.com/lynxai-team/quid/server"
 
 	"github.com/cristalhq/base64"
 	"github.com/golang-jwt/jwt/v5"
