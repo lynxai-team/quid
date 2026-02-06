@@ -1,0 +1,117 @@
+# ---- Build -----------
+#
+#    docker  build -f Containerfile.QuidJS . -t QuidJS
+#    podman  build -f Containerfile.QuidJS . -t QuidJS
+#    buildah build -f Containerfile.QuidJS . -t QuidJS
+#
+# With some arguments:
+#
+#    docker build -f Containerfile.QuidJS --build-arg UID=1133 --build-arg URL=https://USR:PAT@github.com/org/private.git . -t QuidJS
+#
+# Extract the web static files from the container:
+#
+#     mv dist dist.old
+#     docker create QuidJS  # this prints the container-ID to be used in the next commands
+#     docker cp b66288ae5380b2138d17ea2bf44f8bdd4da73a2890f1a0ef6cae87e7dd8abd88:/dist dist
+#     docker rm b66288ae5380b2138d17ea2bf44f8bdd4da73a2890f1a0ef6cae87e7dd8abd88
+#     diff -rq dist.old dist
+#     du -h dist.old dist | sort -h
+#
+# Build+Extract in one command line:
+#
+#    ( set -eux ; docker build -f Containerfile.QuidJS -t QuidJS . ; id="$(docker create QuidJS)" ; rm dist -fr ; docker cp "$id":/dist dist ; docker rm "$id" )
+
+# ---- Run -------------
+#
+#    docker run --rm --name QuidJS QuidJS
+#
+
+
+# --------------------------------------------------------------------
+
+# https://hub.docker.com/_/node
+FROM docker.io/node:24-alpine
+
+# Arguments to run NodeJS as unprivileged.
+ARG UID=1122
+ARG GID=${UID}
+
+# Copy HTTPS root certificates (200 KB).
+# Create user & group files.
+RUN set -ex                                                         ;\
+    mkdir -p                                 /target/cache          ;\
+    mkdir -p                                 /target/config         ;\
+    mkdir -p                                 /target/var/www        ;\
+    mkdir -p                                 /target/etc/ssl/certs  ;\
+    cp -a /etc/ssl/certs/ca-certificates.crt /target/etc/ssl/certs  ;\
+    echo 'user:x:${UID}:${GID}::/:'      >   /target/etc/passwd     ;\
+    echo 'user:x:${GID}:'                >   /target/etc/group
+
+# Run as unprivileged
+USER user:user
+
+# Argument to clone Git repo in format https://USER:TOKEN@github.com/org/private.git
+ARG URL=https://github.com/TealsFi/quidjs
+
+# Arguments to build and serve web files
+ARG addr=http://localhost
+ARG port=55222
+
+WORKDIR /code
+
+# Clone repo + Go build + Clean
+# --mount=type -> https://docs.docker.com/build/cache/optimize/#use-cache-mounts
+# Go build flags: "-s -w" removes all debug symbols: https://pkg.go.dev/cmd/link
+# GOAMD64=v3 --> https://go.dev/wiki/MinimumRequirements#amd64
+RUN --mount=type=cache,target=/go/pkg/mod                                \
+    --mount=type=cache,target=/root/.cache/go-build                      \
+    set -ex                                                             ;\
+    git --version                                                       ;\
+    git clone ${URL} .                                                  ;\
+    ls -lShA                                                            ;\
+    go version                                                          ;\
+    go mod download                                                     ;\
+    go mod verify                                                       ;\
+    ls -lShA                                                            ;\
+    v="$(git describe --tags --always --broken)"                        ;\
+    case "$(grep flags -m1 /proc/cpuinfo)" in                           ;\
+        *" avx512f "*)  export GOAMD64=v4;;                             ;\
+        *" avx2 "*)     export GOAMD64=v3;;                             ;\
+        *" sse2 "*)     export GOAMD64=v2;;                             ;\
+    esac                                                                ;\
+    CGO_ENABLED=0                                                        \
+    GOFLAGS="-trimpath -modcacherw"                                      \
+    GOLDFLAGS="-d -s -w -extldflags=-static"                             \
+    GOEXPERIMENT=newinliner                                              \
+    go build -v -ldflags="-X 'ticksdb/pkg/info.V=$v'" ./cmd/ticksdb     ;\
+    go clean -cache -modcache -i -r                                     ;\
+    ls -lShA                                                            ;\
+    cp -v ticksdb /target                                               ;\
+    rm -rf /code                                                        ;\
+    find /target                                                        ;\
+    /target/ticksdb -version # smoke test
+
+
+WORKDIR /code
+
+COPY package.json ./
+
+RUN set -ex                         ;\
+    yarn versions                   ;\
+    yarn install --frozen-lockfile  ;\
+    yarn cache clean
+
+COPY index.html         \
+    postcss.config.js   \
+    tailwind.config.js  \
+    tsconfig.json       \
+    vite.config.ts     ./
+
+COPY public  public
+COPY src     src
+
+RUN set -ex               ;\
+    ls -lShA              ;\
+    yarn build            ;\
+    mv /code/dist /dist   ;\
+    rm -r /code
