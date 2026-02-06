@@ -61,13 +61,13 @@
   "author": {
     "name": "The Quid contributors",
     "email": "quid@lynxai.team",
-    "url": "https://github.com/lynxai-team/quid/graphs/contributors"
+    "url": "https://github.com/TealsFi/quid/graphs/contributors"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lynxai-team/quid.git"
+    "url": "https://github.com/TealsFi/quid.git"
   },
   "bugs": {
-    "url": "https://github.com/lynxai-team/quid/issues"
+    "url": "https://github.com/TealsFi/quid/issues"
   }
 }

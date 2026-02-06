@@ -6,12 +6,13 @@ import (
 	color "github.com/acmacalister/skittles"
 	"github.com/go-chi/chi/v5"
 
+	"github.com/TealsFi/quid/crypt"
+
 	"github.com/lynxai-team/emo"
 	"github.com/lynxai-team/garcon/gc"
 	"github.com/lynxai-team/garcon/gg"
 	"github.com/lynxai-team/garcon/vv"
 	"github.com/lynxai-team/incorruptible"
-	"github.com/lynxai-team/quid/crypt"
 )
 
 var log = emo.NewZone("api")

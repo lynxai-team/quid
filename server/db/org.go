@@ -4,7 +4,7 @@ import (
 	// pg import.
 	_ "github.com/lib/pq"
 
-	"github.com/lynxai-team/quid/server"
+	"github.com/TealsFi/quid/server"
 )
 
 // SelectAllOrgs : get all the orgs.

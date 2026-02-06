@@ -3,9 +3,10 @@ package api
 import (
 	"net/http"
 
+	"github.com/TealsFi/quid/server"
+	"github.com/TealsFi/quid/server/db"
+
 	"github.com/lynxai-team/garcon/gg"
-	"github.com/lynxai-team/quid/server"
-	"github.com/lynxai-team/quid/server/db"
 )
 
 // allOrgs : get all orgs http handler.

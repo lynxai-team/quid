@@ -1,6 +1,6 @@
-module github.com/lynxai-team/quid
+module github.com/TealsFi/quid
 
-go 1.25.5
+go 1.25.6
 
 require (
 	github.com/lynxai-team/emo v0.0.0-20260102000151-bd606f39cc08

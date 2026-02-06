@@ -6,8 +6,8 @@ import (
 
 	"github.com/manifoldco/promptui"
 
-	"github.com/lynxai-team/quid/server"
-	"github.com/lynxai-team/quid/tokens"
+	"github.com/TealsFi/quid/server"
+	"github.com/TealsFi/quid/tokens"
 )
 
 var (
